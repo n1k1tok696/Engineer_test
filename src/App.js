@@ -83,6 +83,12 @@ class App extends React.Component {
             {asterObj &&
               <Redirect to="/info"/>
             }
+              <Button 
+                variant="contained"
+                color="primary"
+                disabled={input ? false : true} 
+                onClick={() => this.makeCall(this.state.input)}  
+              >Choose</Button>
               <TextField
                 id="outlined-basic"
                 label="Enter Asteroid ID"
@@ -92,12 +98,6 @@ class App extends React.Component {
                 value={input}
                 error={error}
               />
-              <Button 
-                variant="contained"
-                color="primary"
-                disabled={input ? false : true} 
-                onClick={() => this.makeCall(this.state.input)}  
-              >Choose</Button>
               <Button 
                 variant="contained"
                 color="primary"
